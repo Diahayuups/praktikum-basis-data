@@ -654,13 +654,13 @@ MariaDB [dbpegawai]> SELECT COUNT(*) AS jumlah_pegawai_perempuan FROM pegawai WH
 1 row in set (0.001 sec)
 
 Jawaban No. 41 Menampilkan jumlah pegawai bagian divisi SDM
-MariaDB [dbpegawai]> SELECT SUM(1) AS jumlah_pegawai_SDM FROM pegawai WHERE idjabatan = 1;
+MariaDB [dbpegawai]> SELECT SUM(1) AS jumlah_pegawai_SDM FROM pegawai WHERE iddivisi = 1;
 +--------------------+
 | jumlah_pegawai_SDM |
 +--------------------+
-|                  4 |
+|                  5 |
 +--------------------+
-1 row in set (0.002 sec)
+1 row in set (0.001 sec)
 
 Jawaban No. 42 Menampilkan jumlah anggota pegawai per-divisi 
 MariaDB [dbpegawai]> SELECT iddivisi, SUM(1) AS jumlah_pegawai FROM pegawai GROUP BY iddivisi;
